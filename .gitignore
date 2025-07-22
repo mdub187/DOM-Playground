@@ -1,0 +1,7 @@
+**/node_modules/
+**/learnpack/
+.env
+package-lock.json
+serverapi.js
+IMG_2142.JPG
+DS_Store*

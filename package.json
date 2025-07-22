@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "jest": "^30.0.4",
+    "jsdom": "^26.1.0",
+    "node-fetch": "^3.3.2",
+    "web-streams-polyfill": "^4.1.0"
+  },
+  "scripts": {
+    "call-api": "node server.js",
+    "test": "node --no-warnings --experimental-vm-modules $( [ -f ./node_modules/.bin/jest ] && echo ./node_modules/.bin/jest || which jest )",
+    "start": "node server.js"
+  },
+  "type": "module"
+}

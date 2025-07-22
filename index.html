@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DOM Practice</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header>
+            <h1>DOM Practice</h1>
+            <nav aria-label="Main navigation">
+                <section id="column"></section>
+                <section id="row"></section>
+                <ul>
+                    <li>
+                        <button id="change-bg" src="./IMG_2142.JPG">
+                            Change Background
+                        </button>
+                    </li>
+                    <li><button id="append-text">Append Text</button></li>
+                    <li>
+                        <button id="show-bubble">Show Bubble Letters</button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="wrapper">
+                <figure>
+                    <img
+                        id="bg-image"
+                        src="./Untitled.png"
+                        alt="Background image"
+                    />
+                    <button id="showImage">Show Image</button>
+                </figure>
+                <section id="intro" aria-labelledby="intro-heading">
+                    <h2 id="intro-heading">Introduction</h2>
+                    <q id="userContent">
+                        Welcome! This page demonstrates dynamic DOM manipulation
+                        with vanilla JavaScript. Use the buttons above to
+                        interact with the content.
+                    </q>
+                    <div
+                        id="bubble-container"
+                        role="region"
+                        aria-label="Bubble letters display"
+                    ></div>
+                </section>
+                <section id="user-input-section">
+                    <input
+                        type="text"
+                        id="user-input"
+                        placeholder="Enter text"
+                        size="60"
+                    />
+                    <div
+                        id="input-callback-wrapper"
+                        role="article"
+                        aria-label="Callback"
+                    >
+                        <q id="input-callback" />
+                    </div>
+                    <button id="input-callback-btn">Add</button>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <p>Made with</p>
+            <p id="heart">&hearts;</p>
+            <p>Dr. Dizzle D</p>
+        </footer>
+        <!-- <script defer type="text/javascript" src="./appendText.js"></script> -->
+        <script defer type="text/javascript" src="./script.js"></script>
+    </body>
+</html>

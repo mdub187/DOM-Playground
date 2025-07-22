@@ -1,0 +1,86 @@
+html {
+    -webkit-background-origin: content-box;
+    /* align-content: center;
+    place-self: inherit;
+    align-self: center; */
+    justify-self: anchor-center;
+}
+
+* {
+    justify-content: center;
+    flex-basis: auto;
+    align-items: center;
+    align-content: center;
+}
+
+div#input-callback-wrapper {
+    font-size: x-large;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+body {
+    text-align: center;
+    flex-direction: column;
+    color: rebeccapurple;
+    display: inline-flex;
+}
+
+p1,
+bubble {
+    text-align: center;
+    text-decoration: wavy;
+}
+
+section#row::before {
+    content: "ROWS";
+    background-color: brown;
+    section#column::after {
+        content: "COLUMNS";
+        -webkit-writing-mode: vertical-lr;
+        background-color: brown;
+    }
+}
+
+section#column::before {
+    content: "COLUMNS";
+    background-color: yellow;
+    -webkit-writing-mode: vertical-lr;
+    display: inline-table;
+    section#column::after {
+        content: "ROWS";
+        background-color: yellow;
+    }
+}
+
+button {
+    content-align: center;
+    justify-items: center;
+}
+
+p#heart {
+    color: red;
+}
+
+q {
+    content-align: center;
+    justify-items: center;
+}
+
+container,
+nav {
+    content-align: center;
+    justify-items: center;
+}
+
+ul {
+    text-align: justify;
+}
+
+#bg-image {
+    display: block;
+}
+
+footer {
+    text-align: center;
+}
