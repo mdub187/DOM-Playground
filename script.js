@@ -105,23 +105,26 @@ document.addEventListener("DOMContentLoaded", () => {
   const row = document.getElementById("row");
   const column = document.getElementById("column");
   const nav = document.getElementsByTagName("nav");
-  row.addEventListener("click", () => {
-    column.innerHTML = "";
-    nav.innerHTML = "column";
-    document.body.display = !"webkit-writing-mode";
-    ("vertical-lr");
-    row.appendChild(column);
-    console.log(column);
-    console.log(row);
-  });
-
-  column.addEventListener("click", () => {
-    row.innnerHTML = "";
-    nav.innerHTML = "row";
-    document.body.display = !"webkit-writing-mode";
-    ("vertical-lr");
-    column.appendChild(row);
-  });
+  let toggle;
+  if (
+    row.addEventListener("click", () => {
+      column.innerHTML = "";
+      nav.innerHTML = "column";
+      document.body.display = "webkit-writing-mode";
+      ("vertical-lr");
+      row.appendChild(column);
+      console.log(column);
+    })
+  );
+  else
+    column.addEventListener("click", () => {
+      row.innnerHTML = "";
+      nav.innerHTML = "row";
+      document.body.display = "webkit-writing-mode";
+      ("horizontal-tb");
+      column.appendChild(row);
+      console.log(row);
+    });
 
   // Handle user input callback
   inputCallbackBtn.addEventListener("click", () => {

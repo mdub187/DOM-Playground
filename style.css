@@ -4,6 +4,7 @@ html {
     place-self: inherit;
     align-self: center; */
     justify-self: anchor-center;
+    dimensions: responsive;
 }
 
 * {
@@ -35,11 +36,6 @@ bubble {
 section#row::before {
     content: "ROWS";
     background-color: brown;
-    section#column::after {
-        content: "COLUMNS";
-        -webkit-writing-mode: vertical-lr;
-        background-color: brown;
-    }
 }
 
 section#column::before {
@@ -47,10 +43,29 @@ section#column::before {
     background-color: yellow;
     -webkit-writing-mode: vertical-lr;
     display: inline-table;
-    section#column::after {
-        content: "ROWS";
-        background-color: yellow;
-    }
+}
+
+.toggle-section {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.toggle-section:hover {
+    background-color: #e0e0e0;
+    border-color: #999;
+    transform: scale(1.05);
+}
+
+.toggle-section:active {
+    background-color: #d0d0d0;
+    transform: scale(0.95);
 }
 
 button {
@@ -78,7 +93,10 @@ ul {
 }
 
 #bg-image {
-    display: block;
+    display: flex;
+    justify-self: anchor-center;
+    width: 300px;
+    height: 300px;
 }
 
 footer {
