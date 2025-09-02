@@ -8,6 +8,7 @@
     "web-streams-polyfill": "^4.1.0"
   },
   "scripts": {
+    "build": "npm i",
     "call-api": "node server.js",
     "test": "node --no-warnings --experimental-vm-modules $( [ -f ./node_modules/.bin/jest ] && echo ./node_modules/.bin/jest || which jest )",
     "start": "node server.js"
